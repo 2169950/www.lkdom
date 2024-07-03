@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>灵空二级域名分发站公告</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 15px;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus,
+        .btn:hover {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>即将前往新站</p>
+    <button class="btn" id="redirectBtn">立即跳转</button>
+    <button class="btn" id="cancelBtn">继续阅读</button>
+  </div>
+</div>
+
+    <div class="header">
+        <h1>灵空二级域名分发站公告</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <p>尊敬的灵空二级域名分发站用户：</p>
+            <p>您好！</p>
+            <p>我很荣幸地向您宣布，自即日起，灵空二级域名平台将由“抚顺市顺城区热陈计算机信息技术工作室（个体工商户）”进行运营和管理。我是热陈即日起我们将全力以赴确保平台继续为大家提供稳定、优质的服务。</p>
+            <p>在此，我郑重承诺：</p>
+            <ol>
+                <li>业务不变：灵空二级域名平台上原有的业务将保持不变，所有现有客户的服务和权益不会受到任何影响。</li>
+                <li>客户服务保持不变：所有现有客户的账户信息、服务内容及相关数据将完全保留，您无需担心任何变更或数据丢失。</li>
+            </ol>
+            <p>同时，我要特别感谢原站长的辛勤付出和对我的信任。他为灵空二级域名打下了坚实的基础，我将秉承他一贯的优良传统，持续优化和提升服务。</p>
+            <p>另外，我要感谢蜜蜂云对灵空二级域名的支持和帮助。蜜蜂云提供的技术和资源是我们平台稳定运行的保障，我对他们表示由衷的感谢。</p>
+            <p>未来，我们将继续努力，不断创新，为您提供更加优质的服务。感谢您一直以来对灵空二级域名的信任与支持。如果您有任何疑问或需要帮助，请随时与我们联系。</p>
+            <p>感谢您的理解与支持！</p>
+            <p>此致</p>
+            <p>敬礼</p>
+            <p>灵空二级域名</p>
+            <p>抚顺市顺城区热陈计算机信息技术工作室（个体工商户）</p>
+            <p>热陈</p>
+            <p>2024年6月30日</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>版权所有 &copy; 2023-2024 热陈计算机信息技术工作室<a href="http://www.stcpic.cn/">GO</a></p>
+    </div>
+</div>
+
+<script>
+// 获取模态框元素
+var modal = document.getElementById("myModal");
+
+// 获取关闭按钮元素
+var span = document.getElementsByClassName("close")[0];
+
+// 获取重定向按钮元素
+var redirectBtn = document.getElementById("redirectBtn");
+
+// 获取取消按钮元素
+var cancelBtn = document.getElementById("cancelBtn");
+
+// 1秒后自动显示模态框
+setTimeout(function() {
+    modal.style.display = "block";
+}, 60);
+
+// 点击关闭按钮或取消按钮时关闭模态框
+span.onclick = function() {
+    modal.style.display = "none";
+}
+cancelBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// 点击重定向按钮时跳转到新域名
+redirectBtn.onclick = function() {
+    window.location.href = "https://lk.stcpic.cn/";
+}
+
+// 当用户点击模态框外部时，也关闭模态框
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
